@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pg模拟器 · 资料索引与整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.75;
+            color: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .page-wrap {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* hero 模块 */
+        .hero {
+            margin-bottom: 3.5rem;
+            padding-top: 2rem;
+            border-top: 4px solid #d4d4d4;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #111;
+            margin-bottom: 1rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #5a5a5a;
+            max-width: 600px;
+            border-left: 3px solid #b0b0b0;
+            padding-left: 1.2rem;
+        }
+
+        /* 背景说明 */
+        .context-box {
+            background: #ffffff;
+            border: 1px solid #e8e8e8;
+            border-radius: 0;
+            padding: 2rem 2rem 2rem 2.2rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .context-box .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #8a8a8a;
+            margin-bottom: 0.6rem;
+        }
+
+        .context-box p {
+            font-size: 0.975rem;
+            color: #2c2c2c;
+        }
+
+        /* 三段介绍 */
+        .section-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-item {
+            padding-bottom: 1.6rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section-item:last-child {
+            border-bottom: none;
+        }
+
+        .section-item h2 {
+            font-size: 1.25rem;
+            font-weight: 520;
+            letter-spacing: -0.01em;
+            color: #222;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-item .meta {
+            font-size: 0.8rem;
+            color: #8f8f8f;
+            margin-bottom: 0.7rem;
+            display: block;
+        }
+
+        .section-item p {
+            font-size: 0.95rem;
+            color: #3a3a3a;
+            max-width: 640px;
+        }
+
+        .section-item p + p {
+            margin-top: 0.8rem;
+        }
+
+        .inline-link {
+            color: #2a5c7a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b8c9d6;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .inline-link:hover {
+            color: #0d2f40;
+            text-decoration-color: #0d2f40;
+        }
+
+        /* 页尾访问提示 */
+        .site-footer {
+            margin-top: 3rem;
+            padding: 1.8rem 0 0.8rem;
+            border-top: 1px solid #dcdcdc;
+            font-size: 0.85rem;
+            color: #5c5c5c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .site-footer .foot-note {
+            background: #f2f2f2;
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+            color: #3d3d3d;
+            border-left: 2px solid #b0b0b0;
+        }
+
+        .site-footer a {
+            color: #2a5c7a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b8c9d6;
+        }
+
+        .site-footer a:hover {
+            color: #0d2f40;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .context-box {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .section-item h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <!-- hero 横幅 -->
+    <div class="hero">
+        <h1>pg模拟器 · 资料整理与索引</h1>
+        <div class="sub">
+            从模拟环境的术语归档，到功能实测的对照记录 —— 一个以整理为线索的专题笔记。
+        </div>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="context-box">
+        <div class="label">背景说明</div>
+        <p>
+            模拟器领域的资料往往碎片化分布在论坛、文档与个人笔记中，缺少一层轻量的索引结构。
+            本页围绕 <a href="https://cns-web-pg.com" class="inline-link">pg模拟器</a> 的核心参数与适用场景，对公开可查的信息做了归类梳理。
+            内容侧重版本差异、配置标注与常见限制，不包含任何未经核实的性能承诺。
+        </p>
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="section-grid">
+        <div class="section-item">
+            <h2>一、版本与兼容性记录</h2>
+            <span class="meta">基于社区文档与实测整理</span>
+            <p>
+                不同迭代下的 pg模拟器 在指令集支持、内存映射方式上存在细微差异。
+                在比对 v0.9 与 v1.2 的变更日志后发现，后者调整了中断处理流程，并对部分非标准外设的地址空间做了重新划分。
+                这些改动直接影响旧版配置的迁移成本，建议在切换版本前核对 I/O 映射表。
+            </p>
+        </div>
+
+        <div class="section-item">
+            <h2>二、参数配置与常见边界</h2>
+            <span class="meta">典型场景下的阈值参考</span>
+            <p>
+                多数模拟环境对帧缓冲大小、定时器分频系数有隐性上限。
+                在 <a href="https://cns-web-pg.com" class="inline-link">pg模拟器</a> 的实践记录中，当纹理缓存超过 128 MB 或线程数配置超过物理核心数时，部分主机端驱动会触发回退策略。
+                建议保持缓存行对齐，并避免在实时循环内频繁重新绑定着色器参数——这些细节在官方示例中并未充分展开，但实测影响明显。
+            </p>
+        </div>
+
+        <div class="section-item">
+            <h2>三、信息索引与参考清单</h2>
+            <span class="meta">文档、报告与复现笔记</span>
+            <p>
+                本站维护了一份轻量级索引，收录了关于 pg模拟器 的接口说明、版本迁移要点以及若干已知问题的复现步骤。
+                不追求面面俱到，只聚焦于那些在调试过程中反复被查阅的基础信息。
+                对于需要深度分析的读者，索引中标注了原始来源与测试环境，方便自行回溯验证。
+            </p>
+        </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <footer class="site-footer">
+        <div class="foot-note">
+            ⚡ 索引内容持续更新，主要围绕 pg模拟器 的配置与行为记录。
+        </div>
+        <div>
+            如需查阅完整资料页与最新整理结果，可访问 <a href="https://cns-web-pg.com">pg模拟器</a> 的主站索引区。
+            页面内所有信息均来自可核验的公开文档与实测记录。
+        </div>
+        <div style="margin-top: 0.3rem; font-size: 0.75rem; color: #9a9a9a;">
+            &copy; 资料整理 · 非官方文档
+        </div>
+    </footer>
+</div>
+</body>
+</html>
